@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Crypto Table</title>
+    <style>
+        table{
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th,td{
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        th{
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="fetchDataAsync()">fetch Data using Async</button>
+    <button onclick="fetchDataThen()">fetch Data using .then</button>
+    <input type="text" id="searchInput" placeholder="Search.....">
+    <button onclick="searchData()">Search</button>
+    <button onclick="sortData('market_cap')">Sort by Market Cap</button>
+    <button onclick="sortData('price_change')">Sort by Price change</button>
+
+    <table id="cryptoTable">
+        <thread>
+            <tr>
+                <th>Name</th>
+                <th>Id</th>
+                <th>Image</th>
+                <th>Symbol</th>
+                <th>Current Prize</th>
+                <th>Total Volume</th>
+                <th>Market Cap</th>
+                <th>Price Change</th>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+            <tbody id="tableBody">
+
+            </tbody>
+        </thread>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
